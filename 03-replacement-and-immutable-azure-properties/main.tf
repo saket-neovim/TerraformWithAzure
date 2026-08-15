@@ -18,9 +18,9 @@ resource "azurerm_storage_account" "this" {
   account_replication_type = "LRS"
   tags                     = var.tags
 
-  lifecycle {
-    prevent_destroy = true
-  }
+  # lifecycle {
+  #   prevent_destroy = true
+  # }
 }
 
 data "azurerm_client_config" "current" {
