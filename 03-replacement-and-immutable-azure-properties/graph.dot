@@ -1,0 +1,10 @@
+digraph G {
+  rankdir = "RL";
+  node [shape = rect, fontname = "sans-serif"];
+  "data.azurerm_client_config.current" [label="data.azurerm_client_config.current"];
+  "azurerm_resource_group.this" [label="azurerm_resource_group.this"];
+  "azurerm_storage_account.this" [label="azurerm_storage_account.this"];
+  "random_string.suffix" [label="random_string.suffix"];
+  "azurerm_storage_account.this" -> "azurerm_resource_group.this";
+  "azurerm_storage_account.this" -> "random_string.suffix";
+}
