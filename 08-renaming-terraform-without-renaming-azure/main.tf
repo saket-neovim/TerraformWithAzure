@@ -8,12 +8,7 @@
 # TODO: Add module call and moved block or state mv.
 
 module "foundation" {
-  source = "./modules/foundation"
-  prefix = var.prefix
+  source   = "./modules/foundation"
+  prefix   = var.prefix
   location = var.location
-}
-
-moved {
-  from = azurerm_resource_group.foundation
-  to = azurerm_resource_group.foundation
 }
