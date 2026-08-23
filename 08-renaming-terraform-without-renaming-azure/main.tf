@@ -1,14 +1,19 @@
-# resource "azurerm_resource_group" "rg1" {
-#   name     = "${var.prefix}-app-rg"
+# root main.tf, before refactor
+# resource "azurerm_resource_group" "foundation" {
+#   name     = "${var.prefix}-foundation-rg"
 #   location = var.location
 # }
 
-moved {
-  from = azurerm_resource_group.rg1
-  to   = azurerm_resource_group.rg2
+# TODO: Move this into modules/foundation without changing the Azure resource.
+# TODO: Add module call and moved block or state mv.
+
+module "foundation" {
+  source = "./modules/foundation"
+  prefix = var.prefix
+  location = var.location
 }
 
-resource "azurerm_resource_group" "rg2" {
-  name     = "${var.prefix}-app-rg"
-  location = var.location
+moved {
+  from = azurerm_resource_group.foundation
+  to = azurerm_resource_group.foundation
 }
