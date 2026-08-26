@@ -57,3 +57,7 @@ resource "azurerm_subnet_network_security_group_association" "app" {
   subnet_id                 = azurerm_subnet.app.id
   network_security_group_id = azurerm_network_security_group.app.id
 }
+
+data "azurerm_client_config" "current" {
+  
+}
