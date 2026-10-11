@@ -1,9 +1,4 @@
-# app/backend.tf.example
+# Supply backend coordinates through an ignored backend.hcl file at init time.
 terraform {
-  backend "azurerm" {
-    resource_group_name  = "tfazlab-rg"
-    storage_account_name = "tfazlabstorage"
-    container_name       = "primary-container"
-    key                  = "lab10.tfstate"
-  }
+  backend "azurerm" {}
 }
