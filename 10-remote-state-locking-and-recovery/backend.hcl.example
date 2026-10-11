@@ -1,0 +1,5 @@
+# Replace these examples with your existing backend coordinates in backend.hcl.
+resource_group_name  = "example-state-rg"
+storage_account_name = "examplestateaccount"
+container_name       = "tfstate"
+key                  = "lab10.tfstate"

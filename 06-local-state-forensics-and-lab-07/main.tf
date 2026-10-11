@@ -25,5 +25,5 @@ resource "azurerm_storage_account" "main" {
 
 import {
   to = azurerm_storage_account.main
-  id = "/subscriptions/f494677c-c695-4fff-9d7f-160c71b88534/resourceGroups/tfazlab-rg/providers/Microsoft.Storage/storageAccounts/mymainstorageaccount1269"
+  id = var.import_storage_account_id
 }
